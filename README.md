@@ -29,6 +29,31 @@ npx skills add initred/agent-skills --skill git-commit -g
 npx skills add /Users/initred/Code/initred/agent-skills --skill git-commit
 ```
 
+### Claude Code
+
+Claude Code만 대상으로 설치하려면 `-a claude-code`를 붙인다. 이 프로젝트는 `.claude/skills/`, `-g`는 `~/.claude/skills/`에 들어간다.
+
+```bash
+# 이 프로젝트만
+npx skills add initred/agent-skills --skill git-commit -a claude-code
+
+# 모든 프로젝트
+npx skills add initred/agent-skills --skill git-commit -a claude-code -g
+```
+
+스킬 폴더를 직접 복사해도 된다.
+
+```bash
+# 개인 (모든 프로젝트)
+cp -r skills/git-commit ~/.claude/skills/git-commit
+
+# 이 프로젝트만 (팀과 공유하려면 커밋)
+mkdir -p .claude/skills
+cp -r skills/git-commit .claude/skills/git-commit
+```
+
+설치 후 새 세션에서 `/commit`으로 호출하거나, 커밋해 달라고 하면 자동으로 쓴다.
+
 ## Skills
 
 | Skill | 용도 |
