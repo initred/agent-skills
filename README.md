@@ -54,6 +54,21 @@ cp -r skills/git-commit .claude/skills/git-commit
 
 설치 후 새 세션에서 `/commit`으로 호출하거나, 커밋해 달라고 하면 자동으로 쓴다.
 
+#### 플러그인으로 설치하기
+
+이 저장소는 Claude Code 플러그인 마켓플레이스이기도 하다. [`karpathy-guidelines-ko`](skills/karpathy-guidelines-ko/SKILL.md)는 플러그인으로 설치할 수 있다.
+
+```
+/plugin install karpathy-guidelines-ko --marketplace initred/agent-skills
+```
+
+예전 버전의 Claude Code에서는 마켓플레이스를 먼저 추가한다.
+
+```
+/plugin marketplace add initred/agent-skills
+/plugin install karpathy-guidelines-ko@initred-agent-skills
+```
+
 ### Codex
 
 Codex만 대상으로 설치하려면 `-a codex`를 붙인다. 이 프로젝트는 `.agents/skills/`, `-g`는 `~/.agents/skills/`에 들어간다.
@@ -95,6 +110,7 @@ cp codex/agents/git-committer.toml ~/.codex/agents/
 | Skill | 용도 |
 | --- | --- |
 | [`git-commit`](skills/git-commit/SKILL.md) | Conventional Commits. diff 분석, 스테이징, `git commit` 실행. `/commit` |
+| [`karpathy-guidelines-ko`](skills/karpathy-guidelines-ko/SKILL.md) | LLM 코딩 실수를 줄이는 행동 지침 한국어판. 답변도 한국어로 한다. 원본: [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) (MIT) |
 
 ## 스킬 추가
 

@@ -1,0 +1,25 @@
+{
+  "name": "initred-agent-skills",
+  "owner": {
+    "name": "initred"
+  },
+  "metadata": {
+    "description": "initred 개인 Agent Skills 플러그인 모음"
+  },
+  "plugins": [
+    {
+      "name": "karpathy-guidelines-ko",
+      "source": "./",
+      "strict": false,
+      "description": "LLM 코딩 실수를 줄이는 행동 지침 한국어판: 코딩 전에 생각하기, 단순함 우선, 외과적 수정, 목표 중심 실행",
+      "version": "1.0.0",
+      "author": {
+        "name": "initred"
+      },
+      "license": "MIT",
+      "keywords": ["guidelines", "best-practices", "coding", "karpathy", "korean"],
+      "category": "workflow",
+      "skills": ["./skills/karpathy-guidelines-ko"]
+    }
+  ]
+}
