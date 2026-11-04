@@ -2,10 +2,13 @@
 name: git-commit
 description: 'Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit changes, create a git commit, mentions "/commit", or asks to commit in Korean or English (한글로, 한국어로, 영문으로, in English). Supports: (1) Auto-detecting type and scope from changes, (2) Generating conventional commit messages from diff, (3) Interactive commit with optional type/scope/description overrides, (4) Intelligent file staging for logical grouping'
 license: MIT
+model: haiku
 allowed-tools: Bash
 ---
 
 # Git Commit with Conventional Commits
+
+> **Codex:** If the `git_committer` custom agent is available, delegate this entire task to it, passing along the user's request (type, scope, language, files to include or exclude).
 
 ## Overview
 
